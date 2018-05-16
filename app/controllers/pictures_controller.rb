@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
-  before_action :check_user, only: [:index, :new, :show, :edit, :destroy]
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: %i[index new show edit destroy]
+  before_action :set_picture, only: %i[show edit update destroy]
 
   def top
 
