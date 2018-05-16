@@ -9,9 +9,7 @@
     <p><%= image_tag favorite.image_url %></p>
 
     <div class="content_area">
-      <div class="content">
-        <%= good_on_off_button_helper(〇〇, 〇〇) %>
-      </div>
+      <p class="content"><%= good_on_off_button_helper(favorite.id, current_user.id) %></p>
       <p class="content"><%= favorite.content %></p>
     </div>
   </div>
