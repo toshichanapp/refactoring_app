@@ -2,10 +2,6 @@ class PicturesController < ApplicationController
   before_action :check_user, only: %i[index new show edit destroy]
   before_action :set_picture, only: %i[show edit update destroy]
 
-  def top
-
-  end
-
   def index
     @pictures = Picture.all
     @user_id = current_user.id
@@ -36,11 +32,6 @@ class PicturesController < ApplicationController
         format.json { render json: @picture.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def confirm
-    @picture = Picture.new(picture_params)
-    render :new if @picture.invalid?
   end
 
   def update
