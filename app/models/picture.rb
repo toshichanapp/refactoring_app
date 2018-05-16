@@ -7,6 +7,8 @@ class Picture < ApplicationRecord
   validates :content, presence: true, length: { maximum: 255 }
 
   mount_uploader :image, ImageUploader
+
+  delegate :name, :email, to: :user, prefix: true
 end
 
 # 順番

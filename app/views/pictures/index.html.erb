@@ -3,7 +3,7 @@
   <% @pictures.each do |picture| %>
     <div class="pictures center-block">
       <div class="content user_name">
-        <%= picture.user.name %>
+        <%= picture.user_name %>
       </div>
       <p><%= image_tag picture.image_url %></p>
       <%= link_to "ピクチャーを編集する", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' if (picture.user && current_user.id == picture.user.id) %>
