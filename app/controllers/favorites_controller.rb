@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :check_user, only: [:index]
+  before_action :check_user, only: %i[index]
 
   def index
     @favorites = current_user.favorites_pictures
